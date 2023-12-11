@@ -5,7 +5,7 @@ var mytest = (function () {
             console.log('This is an IIFE');
         },
         log2: function () {
-            console.log('This is an IIFE');
+            console.log('This is an IIFE2');
         }
     };
 })();
