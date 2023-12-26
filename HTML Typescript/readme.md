@@ -4,6 +4,19 @@ This todo app is built with Typescript and HTML. It uses LocalStorage to store t
 
 To compile the Typescript files, run `tsc` in the `Typescript` directory.
 
+## Build Process
+
+This project relies on Parcel to build the typescript into html. To install Parcel, run the following command:
+
+    npm install
+
+Run the following command to start the development server with Parcel:
+
+    npm start
+
+
+
+
 ## HTML Snippet
 Assuming you have a basic HTML structure like this:
 
