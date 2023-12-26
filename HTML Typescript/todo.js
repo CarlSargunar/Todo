@@ -12,6 +12,7 @@ class TodoApp {
     addTodoItem(text, completed) {
         if (!text)
             return;
+        console.log('Adding Item: ' + text);
         const listItem = document.createElement('li');
         const checkbox = document.createElement('input');
         checkbox.type = 'checkbox';
@@ -32,6 +33,7 @@ class TodoApp {
         const checkbox = listItem.querySelector('input[type="checkbox"]');
         checkbox.checked = !checkbox.checked;
         const isCompleted = checkbox.checked;
+        console.log('Toggling Item: ' + text + ' - Completed: ' + isCompleted);
         if (isCompleted) {
             this.completedList.appendChild(listItem);
         }

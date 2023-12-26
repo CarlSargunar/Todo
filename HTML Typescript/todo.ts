@@ -25,6 +25,8 @@ class TodoApp {
     private addTodoItem(text: string, completed: boolean) {
         if (!text) return;
 
+        console.log('Adding Item: ' + text);
+
         const listItem = document.createElement('li');
         const checkbox = document.createElement('input');
         checkbox.type = 'checkbox';
@@ -48,6 +50,11 @@ class TodoApp {
         const checkbox = listItem.querySelector('input[type="checkbox"]') as HTMLInputElement;
         checkbox.checked = !checkbox.checked;
         const isCompleted = checkbox.checked;
+
+        console.log('Toggling Item: ' + text + ' - Completed: ' + isCompleted);
+
+
+        // TODO: Move item to completed list if checked, otherwise move to todo list. This isn't working
 
         if (isCompleted) {
             this.completedList.appendChild(listItem);
