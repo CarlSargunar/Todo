@@ -14,6 +14,9 @@ Run the following command to start the development server with Parcel:
 
     npm start
 
+When you're ready to build your site for production, use:
+
+    npm run build
 
 
 
