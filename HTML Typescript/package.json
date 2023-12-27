@@ -2,7 +2,6 @@
   "name": "html-typescript",
   "version": "1.0.0",
   "description": "This todo app is built with Typescript and HTML. It uses LocalStorage to store the todos.",
-  "main": "index.js",
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html"

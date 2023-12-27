@@ -10,7 +10,9 @@ class TodoApp {
     private addItemButton: HTMLButtonElement;
     private todoList: HTMLUListElement;
     private completedList: HTMLUListElement;
+    private clearAllButton: HTMLButtonElement;
     private lastId : number = 0;
+
 
     constructor() {
         console.log('Starting Todo App');
@@ -18,6 +20,7 @@ class TodoApp {
         this.addItemButton = document.getElementById('addItem') as HTMLButtonElement;
         this.todoList = document.getElementById('todoList') as HTMLUListElement;
         this.completedList = document.getElementById('completedList') as HTMLUListElement;
+        this.clearAllButton = document.getElementById('clearAll') as HTMLButtonElement;
 
 
         this.addItemButton.onclick = () => {
@@ -26,8 +29,15 @@ class TodoApp {
             this.newItemInput.value = '';
             this.saveItems();
         };
-        this.newItemInput.value = '';
 
+        this.clearAllButton.onclick = () => {
+            console.log('Clearing All Items');
+            this.todoList.innerHTML = '';
+            this.completedList.innerHTML = '';
+            this.saveItems();
+        }
+
+        this.newItemInput.value = '';
         this.loadItems();
     }
 
