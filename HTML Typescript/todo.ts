@@ -21,7 +21,9 @@ class TodoApp {
 
 
         this.addItemButton.onclick = () => {
+            console.log('Adding Item: ' + this.newItemInput.value);
             this.addTodoItem(this.newItemInput.value, false);
+            this.newItemInput.value = '';
             this.saveItems();
         };
         this.newItemInput.value = '';
@@ -56,10 +58,11 @@ class TodoApp {
 
     private toggleComplete(listItem: HTMLLIElement, text: string) {
         const checkbox = listItem.querySelector('input[type="checkbox"]') as HTMLInputElement;
-        checkbox.checked = !checkbox.checked;
         const isCompleted = checkbox.checked;
+        checkbox.checked = !checkbox.checked;
 
-        console.log('Toggling Item: ' + text + ' - Completed: ' + isCompleted);
+        console.log('Toggling Item: ' + text + ' - Completed is ' + isCompleted);
+        console.log(listItem);
 
 
         // TODO: Move item to completed list if checked, otherwise move to todo list. This isn't working
